@@ -1,0 +1,27 @@
+{
+    
+    "bookmarks":[
+    {
+        "img":"https://www.microdestek.com.tr/wp-content/uploads/2020/04/Hukuk-B%C3%BCrolar%C4%B1-i%C3%A7in-Logo-Tasarlaman%C4%B1n-P%C3%BCf-Noktalar%C4%B1-1.jpg",
+        "title":"Google",
+        "description":"Google search engine",
+        "url":"https://www.google.com/",
+        "tags":["tag1","tag2"],
+        "catagory":"search"
+    },
+    {
+        "img":"https://www.microdestek.com.tr/wp-content/uploads/2020/04/Hukuk-B%C3%BCrolar%C4%B1-i%C3%A7in-Logo-Tasarlaman%C4%B1n-P%C3%BCf-Noktalar%C4%B1-1.jpg",
+        "title":"Google",
+        "description":"Google search engine",
+        "url":"https://www.google.com/",
+        "tags":["tag3","tag4"],
+        "catagory":"engine"
+    }
+
+
+
+]
+        
+    
+}
+    
