@@ -1,20 +1,15 @@
 {
-    "name": "Getting Started Example",
+    "name": "Route Mark",
     "version": "1.0",
-    "description": "Build an Extension!",
+    "description": "Chrome extension for more accessable bookmarks",
     "permissions": ["storage","tabs","unlimitedStorage"],
-    "content_scripts":[
-        {
-            "js":["content.js"],
-            "matches":[
-                "<all_urls>"
-            ]
-        }
-    ],
     "browser_action": {
         "default_title": "Google Mail",  
         "default_popup": "pop.html"    
       },
+      "icons": { "16": "icon16.png",
+        "48": "icon48.png",
+       "128": "icon128.png" },
      
     "manifest_version": 2
 }
