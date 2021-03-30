@@ -1,0 +1,115 @@
+body{
+    width:500px;
+    height:auto;
+}
+#bookmarks-body{
+    padding:4%;
+}
+
+#bookmark-list{
+    min-height: 50px;
+    position:relative;
+    width: 100%;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 10px;
+    overflow-x: hidden;
+    transition:500ms;
+}
+
+@media screen and (max-width: 400px){
+    #bookmark-list{
+        transition:500ms;
+        border-radius: 0px;
+        overflow:scroll;
+        overflow-x: hidden;
+    }
+}
+
+.bookmark-icon{
+    position:relative;
+    max-height: 50px;
+    margin-left: 2%;
+    cursor: pointer;
+    border: 2px solid rgb(231, 231, 231);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+
+.bookmark-item{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    transition: 500ms;
+    display:flex;
+    align-items:center;
+    width:96%;
+    height:75px;
+    border-radius: 15px;
+    background: linear-gradient(90deg, rgb(209, 209, 209) 0%, rgb(236, 236, 236) 44%, rgb(224, 224, 224) 100%);
+    overflow:hidden; 
+}
+
+.bookmark-item:hover{
+    transition: 150ms;
+    box-shadow: 0 0px 7px rgba(0,0,0,0.25);
+}
+
+
+
+.bookmark-content{
+    margin-left: 2%;
+    width: 100%;
+}
+
+.bookmark-title{
+    margin-bottom: -8px;
+    font-size: 16px;
+}
+
+
+.bookmark-description{
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: 10px;
+    color: rgb(46, 46, 46);
+    margin-left: 0%;
+}
+
+#search-input{
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.attributes-div{
+    display:none;
+    height:100%;
+    width:100%;
+    text-align:right;
+  
+}
+.catagory{
+    margin:7%;
+    font-size:14px;
+    font-weight:400;
+}
+
+.tags-div{
+margin-right: 15px;
+    
+}
+.tag{
+    font-weight:150;
+    font-size:10px;
+    margin-left: 4px;
+    margin-bottom: 10px;
+    
+}
+
+.navigator:hover{
+    text-decoration: none;
+}

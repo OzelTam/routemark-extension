@@ -1,0 +1,50 @@
+body{
+    width:500px;
+    height:auto;
+    
+}
+#whole-body{
+    padding:4%;
+}
+
+.add-boomark{
+    margin-top:2%;
+    padding:4%;
+}
+.inpt{
+
+    margin-bottom: 2%;
+}
+.btn-add{
+    margin-top: 1%;
+    align-self:stretch;
+}
+
+#mark-list{
+    margin-top:10px;
+    min-height: 50px;
+    padding:4%;
+    border-radius: 10px;
+}
+.remove{
+    height:20px;
+    width:20px;
+    font-size: 14px;
+}
+#fav-frame{
+    position:relative;
+    max-height: 38px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 5px;
+    margin-right: 2%;
+}
+.fav-tit{
+    display:flex;
+    text-align: center;
+}
+.alert-item{
+    display: flex; 
+    justify-content: space-between;
+}

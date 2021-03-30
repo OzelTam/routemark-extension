@@ -175,6 +175,9 @@ function setData(value){
 
 function getData(callback){
     chrome.storage.local.get(['bmrk'], function(result) {
+        if(JSON.stringify(result) === "{}"){
+            setData([]);
+        }
         callback(JSON.stringify(result))
   });
 }
