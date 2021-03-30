@@ -1,14 +1,29 @@
-function readTextFile(file, callback) {
-    var rawFile = new XMLHttpRequest();
-    rawFile.overrideMimeType("application/json");
-    rawFile.open("GET", file, true);
-    rawFile.onreadystatechange = function() {
-        if (rawFile.readyState === 4 && rawFile.status == "200") {
-            callback(rawFile.responseText);
-        }
-    }
-    rawFile.send(null);
+
+
+function contextFunction(event){
+   // event.preventDefault();
+   // var ctxMenu = document.getElementById("context-menu");
+   // ctxMenu.style.position = "fixed";
+   // ctxMenu.style.display = "block";
+   // ctxMenu.style.left = (event.pageX )+"px";
+   // ctxMenu.style.top = (event.pageY )+"px";
 }
+
+
+//
+//document.addEventListener("click",function(event){
+//    var ctxMenu = document.getElementById("context-menu");
+//    ctxMenu.style.display = "";
+//    ctxMenu.style.left = "";
+//    ctxMenu.style.top = "";
+//},false);
+//
+
+
+
+
+
+
 
 function addBookMark(title ,description ,img, url,tags,catagory){
     var link = document.createElement("a");
@@ -73,6 +88,7 @@ function addBookMark(title ,description ,img, url,tags,catagory){
             var newURL = url;
             chrome.tabs.create({ url: newURL });
     });
+    link.addEventListener("contextmenu",contextFunction,false);
 
     var list_container = document.getElementById("bookmark-list");
     list_container.appendChild(link);
@@ -89,18 +105,22 @@ function loadBookmarks(){
     }catch{}
     
     //Reads saved bookmarks
-    readTextFile("bookmarks.json", function(text){
-        var json = JSON.parse(text);
-
+    
+    getData((data)=>{
+        var json = JSON.parse(data);
         //Loads Bookmarks as list
-        json.bookmarks.forEach((mark)=>{
+        json.bmrk.forEach((mark)=>{
             addBookMark(mark.title,mark.description,mark.img,mark.url,mark.tags,mark.catagory);
         });
-        
     });
+    
+    
+   
+        
+        
 }
 
-function wait (ms) {
+function wait(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }
 
@@ -142,5 +162,22 @@ document.addEventListener("DOMContentLoaded", function(event){
     });
 });
 
+
+
+
+
+
+function setData(value){
+    chrome.storage.local.set({bmrk: value}, function() {
+        console.log('Value is set to ' + value);
+    });
+}
+
+function getData(callback){
+    chrome.storage.local.get(['bmrk'], function(result) {
+        callback(JSON.stringify(result))
+  });
+}
+ 
 
 loadBookmarks();
