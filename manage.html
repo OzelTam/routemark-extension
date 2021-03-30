@@ -23,8 +23,12 @@
             <!--ADD BOOKMARK-->
             <div class="border add-boomark">
 
-                <input id="title-input" type="text" class="form-control inpt" placeholder="Title" aria-label="Title">
 
+              <div class="fav-tit">
+                  <img id="fav-frame"/>
+                  <input id="title-input" type="text" class="form-control inpt" placeholder="Title" aria-label="Title">
+               </div>
+               
                 <input id="url-input" type="text" class="form-control inpt" placeholder="URL" aria-label="URL">
                
                 <!--Description,Catagory-->
@@ -38,15 +42,19 @@
                 </div>
 
                 <input id="tags-input" type="text" class="form-control inpt" placeholder="Tags" aria-label="Tags">
-              
+             
+             <div style="  display: flex; justify-content: space-between;">
                 <button id="btn-addBookmark"type="button" class="btn btn-outline-primary btn-add">Add Bookmark</button>
-            </div>
+                <p id="invalid-label" style="display:none;">Invalid Title</p>
+              </div>
+                
+              </div>
 
             <!--Mark List-->
             <div id="mark-list" class="border">
 
                <!--Mark Template-->
-              <div class="alert alert-warning" role="alert">
+              <div class="alert alert-warning alert-item" role="alert">
                 Google
                 <button type="button" class="btn btn-outline-danger remove"></button>
               </div>
@@ -54,8 +62,5 @@
 
             </div>
         </div>
-      
-
-
     </body>
 </html>
