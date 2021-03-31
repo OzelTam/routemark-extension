@@ -1,5 +1,5 @@
 # Routemark chrome-extension
-Browser extension for create/organize bookmarks.
+Browser extension for making bookmark access easier.
 
  ### How to Install
   #### For Chrome
