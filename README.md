@@ -11,8 +11,9 @@ Browser extension for making bookmark access easier.
     - Done !
 
   #### For Firefox
-    - Firefox extension is not signed yet
-    - It'll be available soon.
+    -Follow the link below :) 
+    - https://addons.mozilla.org/tr/firefox/addon/route-mark/
+
     
     
     
