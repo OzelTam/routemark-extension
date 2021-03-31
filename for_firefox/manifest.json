@@ -1,7 +1,7 @@
 {
     "name": "Route Mark",
     "version": "1.0",
-    "description": "Chrome extension for more accessable bookmarks",
+    "description": "Firefox extension for makking bookmarks easier to access",
     "permissions": ["storage","tabs","unlimitedStorage"],
     "browser_action": {
         "default_title": "Google Mail",  
